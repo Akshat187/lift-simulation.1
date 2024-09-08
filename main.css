@@ -1,0 +1,232 @@
+:root {
+    --color-white: white;
+    --color-black: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(128, 198, 245);
+    /* background-image: url../assets/background.png); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-area {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.input-group input {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 2rem;
+    color: var(--color-text);
+    padding: 1rem 2rem;
+    text-align: center;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.input-btn button {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    color: var(--color-text);
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+
+}
+
+.input-btn button:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.hide {
+
+    display: none;
+}
+
+.output-area {
+    width: 100%;
+}
+
+.action-btn {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.action-btn button {
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    color: #333;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.action-btn button:hover {
+    background-color: #ccc;
+}
+
+.building {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.floor {
+
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 0 5px 5px rgb(255, 255, 255);
+}
+
+.lift-buttons {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-direction: column;
+}
+
+.lift-buttons button {
+    float: left;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 2px 0;
+}
+
+.lift-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lift {
+    height: 100%;
+    width: 5rem;
+    background-color: #191919;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px;
+}
+
+.door-left {
+    width: 49%;
+    height: 100%;
+    background: linear-gradient(to bottom, #bcc6cc, #eee, #bcc6cc);
+}
+
+.door-right {
+    width: 49%;
+    height: 100%;
+    background: linear-gradient(to bottom, #bcc6cc, #eee, #bcc6cc);
+}
+
+.animation {
+    animation: door 2.5s ease-in-out;
+}
+
+@keyframes door {
+    0% {
+        width: 49%;
+    }
+
+    50% {
+        width: 0%;
+    }
+
+    100% {
+        width: 49%;
+    }
+}
+
+
+.active-btn {
+    filter: invert(1);
+    border-radius: 10%;
+}

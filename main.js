@@ -63,8 +63,9 @@ function generateBuilding() {
                          ${liftButtons}
                     </div>
                     <div class="lift-area">
-                         ${liftAreaHTML}
+                         ${liftAreaHTML} 
                     </div>
+                    floor${i}
                </div>
                `;
     }

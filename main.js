@@ -23,8 +23,8 @@ let busyLift = [];
 function handleFloorInputChange(e) {
     floor = e.target.value;
     if (floor < 0 || floor > 99) {
-        alert(`You have entered ${floor} as your floor. Please enter a number between 1 and 99.`);
-        floorInput.focus();
+        // alert(`You have entered ${floor} as your floor. Please enter a number between 1 and 99.`);
+        // floorInput.focus();
     }
 };
 

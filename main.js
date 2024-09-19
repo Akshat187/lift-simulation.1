@@ -33,7 +33,7 @@ function handleLiftInputChange(e) {
     lift = Number(e.target.value);
     let screenSize = window.innerWidth;
     if (lift < 0 || lift > 15) {
-        alert(`You have entered ${lift} as your lift. Please enter a number between 1 and 15. Because you have enough space in your screen.`);
+        // alert(`You have entered ${lift} as your lift. Please enter a number between 1 and 15. Because you have enough space in your screen.`);
         liftInput.focus();
     } else if (screenSize <= 1100 && lift > 4) {
         alert(`You have entered ${lift} as your lift. Please enter a number between 1 and 4. Because you have not enough space in your screen.`);
